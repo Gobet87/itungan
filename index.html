@@ -3,46 +3,37 @@
  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
  <title>Menghitung Persentase Pendapatan</title>
  
- function HitungPersen(){
- modal = document.getElementById("txtModal").value;
- pendapatan = document.getElementById("txtIncome").value;
- laba = pendapatan - modal;
- persen = (laba / modal)*(100);
- persen = persen.toFixed(2);
- document.getElementById("txtLaba").value = laba;
- document.getElementById("txtPersen").value = persen;
-
-}
- 
- </head>
- <body>
- <table border="1" cellspacing="2" cellpadding="2">
- <tr>
- <td colspan="3">Menghitung Persentase Laba</td>
- </tr>
- <tr>
- <td>Modal Awal</td>
- <td>:</td>
- <td><input type="text" id="txtModal" name="txtModal"></td>
- </tr>
- <tr>
- <td>Pendapatan</td>
- <td>:</td>
- <td><input type="text" id="txtIncome" name="txtIncome"></td>
- </tr>
- <tr>
- <td>Laba</td>
- <td>:</td>
- <td><input type="text" id="txtLaba" name="txtLaba" readonly></td>
- </tr>
- <tr>
- <td>%Laba</td>
- <td>:</td>
- <td><input type="text" id="txtPersen" name="txtPersen" readonly>%</td>
- </tr>
- <tr>
- <td colspan="3"><input type="button" id="btnHitung" value="Hitung Persentase Laba" onclick="HitungPersen();"></td>
- </tr>
- </table>
- </body>
-</html>
+<FORM NAME="Calc">
+    <TABLE BORDER=4>
+        <TR>
+            <TD>
+                <INPUT TYPE="text" NAME="Input" Size="20">
+                <br>
+            </TD>
+        </TR>
+        <TR>
+            <TD>
+                <INPUT TYPE="button" NAME="one" VALUE=" 1 " OnClick="Calc.Input.value += '1'">
+                <INPUT TYPE="button" NAME="two" VALUE=" 2 " OnCLick="Calc.Input.value += '2'">
+                <INPUT TYPE="button" NAME="three" VALUE=" 3 " OnClick="Calc.Input.value += '3'">
+                <INPUT TYPE="button" NAME="plus" VALUE=" + " OnClick="Calc.Input.value += ' + '">
+                <br>
+                <INPUT TYPE="button" NAME="four" VALUE=" 4 " OnClick="Calc.Input.value += '4'">
+                <INPUT TYPE="button" NAME="five" VALUE=" 5 " OnCLick="Calc.Input.value += '5'">
+                <INPUT TYPE="button" NAME="six" VALUE=" 6 " OnClick="Calc.Input.value += '6'">
+                <INPUT TYPE="button" NAME="minus" VALUE=" - " OnClick="Calc.Input.value += ' - '">
+                <br>
+                <INPUT TYPE="button" NAME="seven" VALUE=" 7 " OnClick="Calc.Input.value += '7'">
+                <INPUT TYPE="button" NAME="eight" VALUE=" 8 " OnCLick="Calc.Input.value += '8'">
+                <INPUT TYPE="button" NAME="nine" VALUE=" 9 " OnClick="Calc.Input.value += '9'">
+                <INPUT TYPE="button" NAME="times" VALUE=" x " OnClick="Calc.Input.value += ' * '">
+                <br>
+                <INPUT TYPE="button" NAME="clear" VALUE=" c " OnClick="Calc.Input.value = ''">
+                <INPUT TYPE="button" NAME="zero" VALUE=" 0 " OnClick="Calc.Input.value += '0'">
+                <INPUT TYPE="button" NAME="DoIt" VALUE=" = " OnClick="Calc.Input.value = eval(Calc.Input.value)">
+                <INPUT TYPE="button" NAME="div" VALUE=" / " OnClick="Calc.Input.value += ' / '">
+                <br>
+            </TD>
+        </TR>
+    </TABLE>
+</FORM>
