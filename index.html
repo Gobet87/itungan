@@ -1,0 +1,48 @@
+<html>
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+ <title>Menghitung Persentase Pendapatan</title>
+ 
+ function HitungPersen(){
+ modal = document.getElementById("txtModal").value;
+ pendapatan = document.getElementById("txtIncome").value;
+ laba = pendapatan - modal;
+ persen = (laba / modal)*(100);
+ persen = persen.toFixed(2);
+ document.getElementById("txtLaba").value = laba;
+ document.getElementById("txtPersen").value = persen;
+
+}
+ 
+ </head>
+ <body>
+ <table border="1" cellspacing="2" cellpadding="2">
+ <tr>
+ <td colspan="3">Menghitung Persentase Laba</td>
+ </tr>
+ <tr>
+ <td>Modal Awal</td>
+ <td>:</td>
+ <td><input type="text" id="txtModal" name="txtModal"></td>
+ </tr>
+ <tr>
+ <td>Pendapatan</td>
+ <td>:</td>
+ <td><input type="text" id="txtIncome" name="txtIncome"></td>
+ </tr>
+ <tr>
+ <td>Laba</td>
+ <td>:</td>
+ <td><input type="text" id="txtLaba" name="txtLaba" readonly></td>
+ </tr>
+ <tr>
+ <td>%Laba</td>
+ <td>:</td>
+ <td><input type="text" id="txtPersen" name="txtPersen" readonly>%</td>
+ </tr>
+ <tr>
+ <td colspan="3"><input type="button" id="btnHitung" value="Hitung Persentase Laba" onclick="HitungPersen();"></td>
+ </tr>
+ </table>
+ </body>
+</html>
